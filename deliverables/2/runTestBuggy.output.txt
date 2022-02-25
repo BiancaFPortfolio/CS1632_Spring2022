@@ -1,46 +1,17 @@
 TESTING BUGGY IMPLEMENTATION
 
-testProcessCommandDLoseCoffee(CoffeeMakerQuestTest): expected:<
-[Without cream, you get an ulcer and cannot study.
-You lose]!
-> but was:<
-[You drink the beverage and are ready to study!
-You win]!
->
+testAddFirstRoom(CoffeeMakerQuestTest): null
 testAddRoomAtNorthDuplicate(CoffeeMakerQuestTest): null
-testGetCurrentRoom(CoffeeMakerQuestTest): expected null, but was:<Room@153f5a29>
-testProcessCommandDLoseCoffeeCream(CoffeeMakerQuestTest): expected:<
-[Without sugar, the coffee is too bitter. You cannot study.
-You lose]!
-> but was:<
-[You drink the beverage and are ready to study!
-You win]!
->
-testProcessCommandDLoseCoffeeSugar(CoffeeMakerQuestTest): expected:<
-[Without cream, you get an ulcer and cannot study.
-You lose]!
-> but was:<
-[You drink the beverage and are ready to study!
-You win]!
->
-testAddRoomAtNorthUnique(CoffeeMakerQuestTest):
+testAddRoomAtNorthUnique(CoffeeMakerQuestTest): 
 Argument(s) are different! Wanted:
 room.setNorthDoor("North");
--> at CoffeeMakerQuestTest.testAddRoomAtNorthUnique(CoffeeMakerQuestTest.java:117)
+-> at CoffeeMakerQuestTest.testAddRoomAtNorthUnique(CoffeeMakerQuestTest.java:120)
 Actual invocation has different arguments:
 room.setNorthDoor("South");
 -> at CoffeeMakerQuestBuggy.addRoomAtNorth(CoffeeMakerQuestBuggy.java:66)
 
-testProcessCommandDWin(CoffeeMakerQuestTest): expected:<...gar.
-
-You drink the [beverage and are ready to study!
-You win]!
-> but was:<...gar.
-
-You drink the [air, as you have no coffee, sugar, or cream.
-The air is invigorating, but not invigorating enough. You cannot study.
-You lose]!
->
+testGetCurrentRoom(CoffeeMakerQuestTest): expected null, but was:<Room@7c0e2abd>
+testGetInstructionsString(CoffeeMakerQuestTest): expected:< INSTRUCTIONS [(N,S,L,I,D,H) ]> > but was:< INSTRUCTIONS []> >
 testProcessCommandDLose(CoffeeMakerQuestTest): expected:<...GAR!
 
 You drink the [air, as you have no coffee, sugar, or cream.
@@ -51,52 +22,31 @@ You lose]!
 You drink the [beverage and are ready to study!
 You win]!
 >
-testGetInstructionsString(CoffeeMakerQuestTest): expected:< INSTRUCTIONS [(N,S,L,I,D,H) ]> > but was:< INSTRUCTIONS []> >
-testProcessCommandLCream(CoffeeMakerQuestTest):
-Argument(s) are different! Wanted:
-player.addItem(CREAM);
--> at CoffeeMakerQuestTest.testProcessCommandLCream(CoffeeMakerQuestTest.java:192)
-Actual invocation has different arguments:
-player.addItem(COFFEE);
--> at CoffeeMakerQuestBuggy.processCommand(CoffeeMakerQuestBuggy.java:151)
+testProcessCommandDWin(CoffeeMakerQuestTest): expected:<...gar.
 
-testProcessCommandLSugar(CoffeeMakerQuestTest):
-Argument(s) are different! Wanted:
-player.addItem(SUGAR);
--> at CoffeeMakerQuestTest.testProcessCommandLSugar(CoffeeMakerQuestTest.java:291)
-Actual invocation has different arguments:
-player.addItem(COFFEE);
--> at CoffeeMakerQuestBuggy.processCommand(CoffeeMakerQuestBuggy.java:151)
-
-testProcessCommandDLoseCream(CoffeeMakerQuestTest): expected:<
-You drink the [cream, but without caffeine, you cannot study.
-You lose]!
-> but was:<
 You drink the [beverage and are ready to study!
 You win]!
->
-testProcessCommandDLoseSugar(CoffeeMakerQuestTest): expected:<
-You [eat the sugar, but without caffeine, you cannot study.
+> but was:<...gar.
+
+You drink the [air, as you have no coffee, sugar, or cream.
+The air is invigorating, but not invigorating enough. You cannot study.
 You lose]!
-> but was:<
-You [drink the beverage and are ready to study!
-You win]!
 >
 testProcessCommandI(CoffeeMakerQuestTest): expected:<[YOU HAVE NO COFFEE!
 YOU HAVE NO CREAM!
 YOU HAVE NO SUGAR!]
 > but was:<[Player has nothing.]
 >
-testProcessCommandN(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 1837760739> but was:<Mock for Room, hashCode: 1418428263>
-testProcessCommandS(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 2059904228> but was:<Room@6d78f375>
-testAddFirstRoom(CoffeeMakerQuestTest): null
-testProcessCommandDLoseCreamSugar(CoffeeMakerQuestTest): expected:<
-You drink the [sweetened cream, but without caffeine you cannot study.
-You lose]!
-> but was:<
-You drink the [beverage and are ready to study!
-You win]!
->
+testProcessCommandLCream(CoffeeMakerQuestTest): 
+Argument(s) are different! Wanted:
+player.addItem(CREAM);
+-> at CoffeeMakerQuestTest.testProcessCommandLCream(CoffeeMakerQuestTest.java:189)
+Actual invocation has different arguments:
+player.addItem(COFFEE);
+-> at CoffeeMakerQuestBuggy.processCommand(CoffeeMakerQuestBuggy.java:151)
+
+testProcessCommandN(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 1463757745> but was:<Mock for Room, hashCode: 1525262377>
+testProcessCommandS(CoffeeMakerQuestTest): expected:<Mock for Room, hashCode: 1837760739> but was:<Room@548b7f67>
 testSetCurrentRoom(CoffeeMakerQuestTest): null
 
 !!! - At least one failure, see above.
