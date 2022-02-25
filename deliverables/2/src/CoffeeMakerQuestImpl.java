@@ -222,7 +222,7 @@ public class CoffeeMakerQuestImpl implements CoffeeMakerQuest {
 		} else if(p.checkCoffee()) {
 			return "Without cream, you get an ulcer and cannot study.\nYou lose!\n";
 		} else if(p.checkCream()) {
-			return "You drink the cream, but without caffeine, you cannot study.\nYou lose!\nå";
+			return "You drink the cream, but without caffeine, you cannot study.\nYou lose!\n";
 		} else {
 			return "You eat the sugar, but without caffeine, you cannot study.\nYou lose!\n";
 		}
